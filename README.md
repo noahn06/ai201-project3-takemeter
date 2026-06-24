@@ -4,6 +4,11 @@ A fine-tuned text classifier that evaluates discourse quality in r/ArtificialInt
 
 ---
 
+## Loom Video
+
+https://www.loom.com/share/d48a25b3a8224cd2a01243667f22284c
+
+
 ## Community Choice
 
 I chose **r/ArtificialInteligence** on Reddit as my community. It is an active forum where discourse ranges from factual reporting on industry developments to bold speculative opinions and rigorous technical arguments. The community is a strong fit for a classification task because the same topic can generate all three types of post — a press release summary, a contrarian hot take, and a data-backed analysis — making the label boundaries meaningful and non-trivial. Domain knowledge ranges from first-time AI users to ML engineers, producing a wide spectrum of post quality and intent.
@@ -89,16 +94,27 @@ A structured argument backed by statistics, reports, or observation. Evidence mu
 
 **Prompt used:**
 ```
-You are a text classifier. Classify the following Reddit post from r/ArtificialInteligence into exactly one of these three labels:
+SYSTEM_PROMPT = """
+You are classifying posts from r/AI, a subreddit where people discuss AI news, research, and opinions.
+Assign each post to exactly one of the following categories.
 
-- `news` — The post primarily conveys new, verifiable information about AI...
-- `hot_take` — The post makes a bold, confident opinion or prediction without citing sources...
-- `analysis` — The post makes a structured argument backed by attributed statistics...
+news: The post reports new, verifiable information about AI — a company announcement, product release, research finding, or event. It sticks to facts and cites a source. No personal opinion or argument.
+Example: "SpaceX signed a merger agreement to acquire Anysphere (Cursor) in an all-stock deal valuing it at $60B. Expected to close Q3 2026, pending regulatory approval."
 
-Respond with ONLY the label name. No explanation. No punctuation.
+hot_take: The post makes a bold, confident claim or opinion without backing it up with data, reasoning, or evidence. It asserts rather than argues.
+Example: "Why not Desalination? If one of the issues with data centers is water usage, why not incorporate desalination into the water cooling systems and build them near the ocean."
 
-Post to classify:
-{text}
+analysis: The post builds a structured argument supported by specific data, observations, comparisons, or logical reasoning. The claim is explained, not just stated.
+Example: "Sensor Tower has ChatGPT under 50% of global assistant share for the first time — 46.4% by end of May, with Gemini at 27.7 and Claude at 10.3. The useful detail is that people increasingly switch between assistants by task, not loyalty."
+
+Respond with ONLY the label name.
+Do not explain your reasoning.
+
+Valid labels:
+news
+hot_take
+analysis
+"""
 ```
 
 **How results were collected:** The Colab notebook's Section 5 classified all test set examples using this prompt via the Groq API and computed accuracy and per-class metrics automatically.
@@ -200,18 +216,3 @@ I used Claude to pre-label batches of posts using my label definitions from `pla
 
 **Instance 2 — CSV format troubleshooting:**
 When my CSV kept breaking the Colab notebook with a `KeyError: 'label'`, I asked an AI assistant to help diagnose the issue. It identified that my file was being read as a single column named `text,label` instead of two separate columns — meaning the entire CSV was wrapped in quotes and the comma delimiter was not being recognized. The fix was to re-export the file from Google Sheets, which stripped the bad quoting and produced a properly formatted two-column CSV.
-
----
-
-## Repository Contents
-
-| File | Description |
-|---|---|
-| `planning.md` | Label design, data plan, evaluation metrics, AI tool plan |
-| `data.csv` | Full labeled dataset (200 examples) |
-| `README.md` | This file |
-| `confusion_matrix.png` | Visual confusion matrix from fine-tuned model |
-| `evaluation_results.json` | Raw metrics for both models |
-| `prompts/claude_bulk_labeling_prompt.md` | Prompt used for AI pre-labeling |
-| `prompts/groq_baseline_prompt.md` | Prompt used for zero-shot baseline |
-| `prompts/failure_analysis_prompt.md` | Prompt used for failure pattern analysis |
