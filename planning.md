@@ -139,6 +139,23 @@ Next time someone proposes standardizing your whole product on one model, ask wh
 **What type of post will be genuinely ambiguous between two labels? How will you handle it when you encounter it during annotation?**
 * [x] [a post that seems to report on something new in the industry which would fall under the news label, but also contains the poster's opinion about it and how they feel about it and how it personally effects them. this would cause a confusion as then it becomes a hybrid of analysis and hot take. i will handle this when i encounter it by choosing the label that best represents the primary purpose of the post. if the post is primarily about conveying new information, then it will be labeled as news. if it is primarily about sharing the poster's opinion, then it will be labeled as analysis or hot take.]
 
+### Documented Hard Cases
+
+case 1:
+> "For the task I challenged it with — a problem in Diophantine analysis — it cost me 10x more than Opus 4.8 on max effort. It did the job better, but we're talking about Opus 4.8 after it had been degraded from normal performance (they always do that before releasing a new model), running at 10x the cost."
+
+label: analysis. starts as a personal anecdote but i labeled it analysis because the person actually backs up what they're saying. they give a specific 10x cost comparison, explain that opus 4.8 was degraded before the new model launched, and use that to argue you might not even be comparing equal versions. that's not just a story, that's a structured cost-benefit argument. a hot take would've just said "it was expensive" and moved on. the 10x number and the reasoning behind it is what pushed it into analysis.
+
+case 2:
+> "It's not even a knowledge gap, it's a willingness gap. The brand already knows every failure case better than anyone — their support team answers those questions all day. They just won't publish it because legal and marketing both flinch at a page that says 'yeah this breaks if you do X.'"
+
+label: analysis. sounds like a rant at first but i labeled it analysis because the person isn't just complaining, they're making a specific argument. they say it's not a knowledge gap, it's a willingness gap, and then explain exactly why — support teams already know the failure cases, legal and marketing just won't let them publish it. there's a real chain of reasoning there: brands have the info, institutional resistance stops them from sharing it, so it's a choice not a limitation. a hot take would've been "brands don't care about their customers" with nothing behind it.
+
+case 3:
+> "Because there's more text to read at Reddit. It's a simple consequence of how an LLM works — if you feed it nine pages of Shakespeare and one page of James Joyce, it's going to mostly sound like Shakespeare. Reddit has a really large amount of text, larger than any ten other websites I can think of, including Wikipedia. It's like asking 'if I shoot a hundred arrows, how come I keep mostly hitting the barn and not this flower?' The barn's pretty big is why."
+
+label: analysis. labeled analysis because even though it reads casually, the person is actually explaining the mechanism behind why LLMs sound like reddit. they walk through how training data volume affects output probability, give a concrete comparison (reddit has more text than wikipedia and nine other sites combined), and use the barn/arrow analogy to make the logic clear. the reasoning is transparent even without citations. a hot take would've just said "ai is trained on reddit so it sounds like reddit" without explaining the why.
+
 ## 4. Data Collection Plan
 **Where will you collect examples? How many per label? What will you do if a label is underrepresented after 200 examples?**
 * [x] [i will collect 200 examples from r/AI on reddit.com. since i have 3 labels it will be about 67 posts per each label. if a label is underrepresented after 200 examples i will go back and collect more examples for that specific label until it is no longer underrepresented.]
@@ -151,18 +168,14 @@ Next time someone proposes standardizing your whole product on one model, ask wh
 **What performance would make this classifier genuinely useful? What would you accept as "good enough" for deployment in a real community tool?**
 * [x] [i would consider this classifier genuinely useful if it hits an overall accuracy of at least 80%. for it to be 'good enough' for deployment in a real community tool, i would need the precision for the 'news' label to be greater than 85%, so that users aren't accidentally reading hot takes when they just want verifiable facts. i want the confusion matrix to show that the model confuses 'hot take' and 'analysis' less than 15% of the time, since those are the hardest to distinguish.]
 
-
----
-
 ## AI Tool Plan
-**1. Label stress-testing:** Give the AI your label definitions and edge case description, and ask it to generate 5–10 posts that sit at the boundary between two labels. If it produces posts you can't classify cleanly, your definitions need tightening.
-* [ ] [Fill in your plan/results for stress-testing here]
 
-**2. Annotation assistance:** Decide whether you'll use an LLM to pre-label a batch of examples before reviewing them yourself. If yes, note which tool you'll use and how you'll track which examples were pre-labeled (for disclosure in your AI usage section).
-* [ ] [Fill in your plan for annotation assistance here (or state explicit decision to skip)]
 
-**3. Failure analysis:** Plan to give your list of wrong predictions to an AI tool and ask it to identify patterns before you write up your evaluation. Note what you'll look for and how you'll verify the patterns yourself.
-* [ ] [Fill in your plan for failure analysis here]
+**1. Annotation assistance:** Decide whether you'll use an LLM to pre-label a batch of examples before reviewing them yourself. If yes, note which tool you'll use and how you'll track which examples were pre-labeled (for disclosure in your AI usage section).
+* [x] [i will just do this by hand.]
+
+**2. Failure analysis:** Plan to give your list of wrong predictions to an AI tool and ask it to identify patterns before you write up your evaluation. Note what you'll look for and how you'll verify the patterns yourself.
+* [x] [after running my model on the test set, i will take all the posts it got wrong and paste them into claude. i will ask it to find patterns in what the model keeps misclassifying — things like whether it keeps confusing news posts that have an opinion at the end with analysis, or whether it mislabels well-written hot takes as analysis because they sound confident and specific. i will then go read those posts myself to check if the patterns claude identified actually hold up, and use that to write the failure section of my evaluation.]
 
 ---
 
