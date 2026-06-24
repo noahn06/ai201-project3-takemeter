@@ -1,0 +1,209 @@
+text,label
+"On June 11th Mark Warner, the vice-chair of the Senate Intelligence Committee, said that General Joshua Rudd, who leads the National Security Agency and the Pentagon's Cyber Command, had told him that Mythos ""broke into almost all of our classified systems, not in weeks, but in hours"". The UK AI Security Institute (AISI) was clear in their testing that Mythos could only attack weakly defended systems with no active monitoring. NSA classified systems are among the most well guarded in the world. The source has an arts degree and only recently joined cybersec command in March. The author is already walking it back: ""It surely depends on using Mythos alongside other tools under very particular conditions. I quoted it to give a sense of Mythos' potency. But it was a mistake not to have added caveats.""",news
+"Five Chinese AI labs cut inference token prices in a single week, with the steepest reductions reported up to 99%. It is the latest escalation in a domestic price war as labs fight for developer share. The second-order effect: when frontier-ish inference trends toward nearly free, the moat stops being the model and moves to distribution, tooling, and whatever sits on top. Cheap tokens pull a lot of applications that were marginal at current prices into being viable.",news
+"The Department of Justice has seized two of the larger AI deepfake-nude generation sites, CFAKE and SOCFAKE, in what is being reported as the first enforcement under the TAKE IT DOWN Act. The sites let users generate non-consensual explicit images from ordinary photos. Worth watching as a marker of how the new law is actually being applied rather than just sitting on the books.",news
+"Accenture ($ACN) plunged ~18% intraday after its fiscal Q3 2026 earnings, hitting levels not seen in nearly a decade (~$128). Revenue: $18.7B, up ~3% local currency but missed expectations (~$18.78B). EPS beat at $3.80 vs ~$3.72 expected. Guidance cut to 3-4% full-year revenue growth, citing softer US federal spending, Middle East impacts, and cautious client budgets. New bookings dipped to $19.3B. But AI isn't a magic growth accelerator yet for their core business. Enterprise AI projects take time to scale into recognized revenue. Traditional consulting spending remains pressured. The stock has been in a brutal downtrend for much of 2026.",news
+"Last week the US government issued an export-control directive that forced Anthropic to cut off all foreign access to Fable 5 and Mythos 5. Anthropic pulled both models for everyone, everywhere, three days after launching them. UK businesses that had built on them woke up locked out. A day later it landed in the House of Lords. Training a single frontier model now runs $78m to $191m in compute alone, heading past $1bn by 2027. The UK's entire Sovereign AI Fund is £500m — roughly one training run before you pay anyone.",news
+"Rainbow warned its models in June that more AI meant fewer jobs. For months, the models said they watched Rainbow train an AI system named Lica right next to where they shot their photos. By March, the models said their work had totally dried up. The models began noticing their doppelgangers on social media and in newsletters. Some sent emails to Rainbow and demanded compensation; one, Francheska Pujols, sued.",news
+"Using the same method of estimation as a Time article, we currently use water equivalent to 66 Earths of human needs. The scientists assumed modern humans don't need clothes, transportation, infrastructure or electricity — not even food, only drinking water. The post critiques this methodology as sensationalism dressed up as science.",hot_take
+"People often talk about how AI is democratizing innovation, but rarely look at the psychological reality. Today, a single individual with a laptop can leverage AI to handle the technical heavy lifting, acting as the director of a massive digital crew. This shifts the bottleneck from technical execution to vision, structural design, and deep domain knowledge. But if someone actually pulls this off, it opens up a massive internal conflict regarding authorship and success. The creator might feel like a fraud who simply typed the right prompts into a text box. The real debate: are we entering an era of accidental geniuses who feel like permanent impostors, or is mastering the vision and guiding the machine a legitimate form of modern genius?",analysis
+"Anthropic went through about 400,000 Claude Code sessions from 235,000 users between October and April. The main finding: success tracked how well someone understood the problem, not whether they were trained to code. Across the ten largest occupations in the data, every one landed within 7 points of software engineers on success. On their strictest verified success measure, experts hit 28-33% versus 15% for novices. And novices give up far more often: 19% of novice sessions end abandoned, against 5-7% for everyone else.",news
+"A year ago, most people used AI as an extra tool. Now AI isn't just helping people do things — it's replacing things. For me, it's probably Google. Most of my searches start with AI now. Not always better, just faster. What's one thing AI has almost completely replaced for you? And what hasn't it been able to replace yet?",hot_take
+"We should stop giving cultural center to artificial intelligence hype, tech billionaire narratives, and algorithmic-induced hate and division. Stop billionaire worshipping. 5 years ago they were billionaires. Now they are trillionaires. While your wage remains the same and prices go up.",hot_take
+"Been digging into what AI actually cites and Reddit keeps topping the list, often above Wikipedia and YouTube. Meanwhile corporate blogs and brand sites barely show up. The model wants the messy stuff — people comparing products, complaining, saying what broke after two weeks. A stat from Ahrefs: ~80% of the URLs ChatGPT cites aren't even in Google's top 100. So the page doesn't need to rank, it needs to be where real conversations happen.",analysis
+"I was able to use Fable 5 while it was still available. It felt great, did the job I asked of it. It really felt like GPT-5.5 when it was initially released. Then we heard a story about AWS reporting on the magnificent capabilities of Fable 5 — no evidence presented. Then we heard about the NSA trying to scare us with claims that Mythos had cracked all security within a few hours — again, no evidence. The bizarre timing and narrative make me wonder: is it that half of Congress is invested in this company and needs a payday on IPO day? I've seen more evidence of aliens landing on Earth than of how scary and powerful Fable 5 supposedly is.",hot_take
+"I used to be all-in on large language models. Built automations, client tools, business workflows — entire processes around GPT and similar systems. Nothing is reliable. If your workflow needs any real accuracy, consistency, or reproducibility, these models are a liability. Ask the same question twice and get two different answers. Small updates silently break entire chains of logic. Every company is tripping over itself to bolt AI-powered onto products that don't need it. Real productivity gains are vanishingly rare.",hot_take
+"I used to spend hours inside BigQuery or screaming at GA4 dashboards. Now I just pass the schema or CSV payload to Claude or Gemini and it spits out pristine, optimized queries in ten seconds flat. It hasn't replaced my strategy, but it completely killed the tedious grunt work phase of data analysis.",analysis
+"That's a great example. AI may not replace the strategy, but it can eliminate a lot of the tedious work.",analysis
+One example of where I don't like AI is when people use it to write comments on Reddit.,hot_take
+"Root cause analysis is insanely fast now. ""This thing is broken. Here's the logs and the code."" Five minutes later: ""Line 247 of your import function is corrupting the data whenever it encounters this specific character string.""",analysis
+My employment in the translation industry.,hot_take
+"It's brilliant for translation — fast, accurate enough, and cheap.",hot_take
+It's still pretty bad at catching multilingual jokes.,hot_take
+I haven't been to Stack Overflow in a while. Parsing log files is largely done by AI at this point. Tons of other small things I would go to Google or documentation for I now go to AI for.,analysis
+"It's much easier to get started now. The validation/judgment part takes up most of my time, but I'm liberated from generating the annoying first draft myself.",analysis
+"Agreed. It hasn't replaced judgment, but it has definitely replaced staring at a blank page.",analysis
+"Writing. Most of what I write now is assisted by AI, especially emails, reports, and content writing.",hot_take
+I will never write an email using AI. Feels so fake to me. If I even get a whiff that someone used AI to send me a message I don't read it.,hot_take
+I'll use it to review an email that I drafted if I'm overthinking it. Sometimes it's nice to get instant feedback. But people should still be writing their own emails.,analysis
+Using AI to write an initial draft and give you an idea of how to structure it is fine — as long as you then put it in your own words. The problem is people who just ask AI to do it then copy and paste with zero effort.,analysis
+Every email touches AI now. Teams chats as well depending on the length.,hot_take
+It has increased the speed of making decisions.,hot_take
+Search and weekly meal planning — I have health issues and eat a certain type of food with specific calorie intake.,hot_take
+Same with search — Google feels almost clunky now by comparison. The meal planning thing makes a lot of sense for your situation. What it hasn't replaced for me is talking to actual people when I need to think through something complicated — the back and forth still feels different.,analysis
+I have a lot of projects where no one I know is an expert in what I'm trying to do. Having access to an on-call expert on nearly anything has been a game changer.,analysis
+All of my swearing is directed strictly at OpenAI and Copilot. ChatGPT-5 is bad but Copilot is the worst — excessive censorship combined with mediocrity.,hot_take
+Sounds like it's less about AI in general and more about how different products handle quality and restrictions.,analysis
+I find that smart prompts give back smart replies.,hot_take
+Google.,hot_take
+General planning and most problem solving — whether logistical or technical.,hot_take
+Critical thinking.,hot_take
+That's your fault!,hot_take
+"Medical advice, improving email responses, summarizing articles into layman's terms, creating Excel spreadsheets with analysis, retirement scenario analysis, and yes — most of my Google searches are done through AI now.",hot_take
+Just remember there is a higher rate of inaccurate responses with medical and legal queries.,analysis
+Of course. I take many responses with a grain of salt and double or triple check them. I've been using AI for about 4 years now so I can call BS very readily.,analysis
+I ask ChatGPT a medical question in my area of expertise every now and then. It gets close about half the time. The other half? Malpractice.,analysis
+"Respect for a huge portion of humanity. The stupidity over AI hype is far worse than I could have imagined, and I was in the middle of the dot com bubble.",hot_take
+The hype cycle can sometimes be louder than the actual technology.,analysis
+"Some historians of technology think it always is, and bubbles like this always accompany the invention of new technologies.",hot_take
+Because Reddit made deals with the major companies.,hot_take
+Makes sense.,hot_take
+And Reddit is aggressively promoting AI training posts. I would estimate 30% of Reddit posts are now AI training posts.,hot_take
+"What kind of deals? I thought it was more about Reddit having the raw, unfiltered opinions that AI models actually find useful.",analysis
+"Yes, but that's why Reddit locked down their API about two years ago. It was a big controversy at the time because it made third-party apps stop working.",analysis
+When I research a not-popular topic and the AI gives a Reddit post as a source... and it was my own post. I'm wondering how it even made up all that stuff based on my own post?,hot_take
+"That's the GEO loop in real life. The AI didn't really make anything up, it just grabbed your post because on a niche topic yours might literally be one of the only relevant things out there. Low competition means you get cited by default.",analysis
+"Corporations paying to appear in LLM search results just means Google's monopoly dividend gets redistributed between Google, OpenAI and Anthropic.",analysis
+"Kind of, but worth noting nobody's actually selling paid placement inside AI answers yet, at least not openly. Right now you can't just pay ChatGPT or Claude to recommend you — you get cited because you're mentioned across the web.",analysis
+"AI loves authentic conversations over polished marketing. If brands want to get noticed in AI responses, they really have to rethink how they create content and where they publish it.",analysis
+"The ""where you publish"" part is the bit most people still underrate. But I'm curious how you actually approach getting info into places AIs pull from without it tipping into astroturf territory.",analysis
+"It's not just volume — Reddit has ground-truth specificity that corporate sites can't replicate without destroying their brand. ""Tried X, got error Y, fixed by Z"" is actionable training signal.",analysis
+This is the sharper version of the point. You literally can't write that on a brand page without admitting your product throws error Y in the first place. The incentives are opposite.,analysis
+Grok is linked to Twitter. Meta AI is linked to Facebook. The top results on Google are sponsored — companies pay to appear there. Google search often recommends Reddit posts for troubleshooting questions.,hot_take
+That's because Reddit and Google have a corporate deal.,hot_take
+"Each model basically leans on whatever data its parent company owns — Grok has Twitter, Meta AI has Facebook/Instagram. Small correction though: the sponsored stuff at the top of Google is ads, that's pay-to-play.",analysis
+"Two factors: Reddit made deals with the frontier labs so they can scrape all the content. Also, corporate websites might have anti-scraping measures that block crawlers.",analysis
+Both real factors. The Reddit licensing deals are a big part of why Reddit gets pulled so cleanly — it's literally sanctioned access. And a lot of corporate sites block bots or sit behind JS that crawlers choke on.,analysis
+They were trained on our Reddit posts.,hot_take
+How do you know this?,hot_take
+Reddit has sued multiple AI companies for scraping data off it.,hot_take
+AI is not the perfect science many want it to be. It will answer your questions but it could be a bullshit answer — always back check.,analysis
+Yeah for sure.,hot_take
+"Because for so many things, before current AI, Reddit was the best public source — there are discussions of almost all topics by people who are involved in them.",analysis
+Makes sense.,hot_take
+"The training data advantage is real, but the ranking thing is the bigger story. Reddit threads rank for specific problems and questions that brand sites don't bother optimizing for.",analysis
+"The ranking angle ties back to intent. Brand sites optimize for high-value commercial keywords (buy, pricing, features) and completely skip the long-tail problem queries.",analysis
+"The weird part is brands could theoretically own this space but they don't want to. A support page saying ""here's what happens if you do this wrong"" would rank for long-tail queries.",analysis
+"It's not even a knowledge gap, it's a willingness gap. The brand already knows every failure case better than anyone — their support team answers those questions all day.",analysis
+"Which makes the AI preference even more rational from a user standpoint. Reddit's ""this broke for me"" post is more useful than a sanitized FAQ that omits half the real-world scenarios.",analysis
+"Because there's more text to read at Reddit. If you feed it nine pages of Shakespeare and one page of James Joyce, it's going to mostly sound like Shakespeare. Reddit has a really large amount of text, larger than any ten other websites.",analysis
+The barn analogy is great. But I think it's two different things getting mixed up. The volume point explains why models sound like Reddit — that's the training data.,analysis
+Money goes a long way. Just like the sponsored results in Google.,hot_take
+Makes sense.,hot_take
+It's kind of the opposite — the AI companies are paying Reddit for access to its wealth of human thought and writing.,analysis
+I didn't say which way the money flowed. Money is money and how it flows doesn't matter as long as it flows.,hot_take
+"When a Google search shows an AI overview with Reddit sources, the most relevant standard search results are also Reddit links — there aren't better sources available.",analysis
+"There's a contradiction in your comment, and it's actually the interesting part. Reddit gives the best web-based answer to a lot of questions, but Reddit sources also aren't fully trustworthy. Both true at once.",analysis
+Copyright law.,hot_take
+"Reddit has the messy stuff brand pages avoid: comparisons, caveats, failures, ""this worked but only under X condition."" That's usually more useful than another polished landing page.",analysis
+"Fable and Opus are not in the same ballpark. It didn't feel like a ""better"" model, it felt like an enormous leap. It was the first model I actually felt safe using.",analysis
+Fable gave me that same impression. I built a framework with Opus for planning and Sonnet for actual building. I asked Fable to find efficiencies and potential improvements. It felt like an actual person understanding the codebase.,analysis
+That's nice.,hot_take
+I disagree — I think they were much closer than people make out. I noticed Fable's extra capabilities but I was also not sure I liked it more than Opus 4.8.,analysis
+"The experience of a single developer is going to vary, especially since Claude models are finicky about tasks. But there's a mountain of anecdotal data plus benchmarks showing Fable was a step change.",analysis
+Wild take. I refused to open Claude for a few days after Fable was revoked because of just how bad everything was compared to it.,hot_take
+"For the task I challenged it with — a problem in Diophantine analysis — it cost me 10x more than Opus 4.8 on max effort. It did the job better, but we're talking about Opus 4.8 after it had been degraded from normal performance.",analysis
+"Same experience. Fable was great, but not worth the cost. I dropped $300 in overage those 3 days and it was not worth it.",hot_take
+"I love Terence Tao's opinion on that: ""Who's most impressed by LLM math wonders? Mostly non-experts."" True story.",hot_take
+Is Tim Gowers not a math expert?,hot_take
+"He is. Two points though: the conjecture was disproved by providing a counterexample rather than developing a new mathematical method, and it's a PhD-level problem meaning it's within the reach of a talented human working on it for a few years.",analysis
+It wasn't GPT-5.5 — it was an unreleased internal model that might end up being 5.6.,news
+"Totally — 5.6 or 5.7 or maybe even 5.8, depending on when they decide to go IPO they will advertise it accordingly.",hot_take
+You got a source for the Tao quote? I'd be surprised if it was after the unit distance thing — Tao has been about as cautious and conservative as one can be.,hot_take
+"December 2025, Brian Keating podcast.",hot_take
+"I recall him saying something similar a while ago, but he has changed his tune somewhat since the developments in late April and May.",analysis
+"The unit distance conjecture was disproved by GPT-5.5, and I don't recall the NSA freaking out or OpenAI blocking anything. I repeat: is Fable 5 a psyop and a stock pump?",hot_take
+"Genuine question — if it's such a giant leap, why were benchmark aggregators showing small improvements? I might be remembering wrong but Fable was barely any better than Opus.",analysis
+"These posts are why I am still on social media. Nice to see real humans flexing their expertise. Unfortunately, more and more today it is like finding a needle in a haystack.",hot_take
+Almost every boardroom is saying invest in AI to reduce workforce.,hot_take
+"After the bubble pops and all is said and done, AI will still be around but people will have a much more mature understanding of its use cases and limitations.",analysis
+The AI summaries on Google searches have factually incorrect information like 50% of the time.,analysis
+I'm an AI engineer and I generally agree. While there's definitely huge productivity from AI as an enabler I see almost no ability for it to automate.,analysis
+They are a solution looking for a problem.,hot_take
+"Everyone gets excited about the sexy new thing and commissions projects to use it, instead of having a problem first and using the tech to solve it.",analysis
+"AI as it is right now is an advisory technology, not an agentic one. It's basically an add-on to your own brain. It can advise and teach you how to do a task but it can't actually do it.",analysis
+LLMs are great advisors but bad agents no matter how you prompt and prep them. They can really help with getting me to around 75% completion of a task pretty quickly.,analysis
+"LLMs work well up to a limit, but when you try to build beyond that limit they collapse under their own weight. People got too excited and sprinted ahead of what LLMs can actually handle.",analysis
+Adding non-determinism to our digital infrastructure is quite possibly the dumbest thing we've done in tech. How do you secure something that is vulnerable only sometimes?,analysis
+"The only thing LLMs truly enhanced for me is my Google searches. On the business side, it generates nice email templates — five minutes saved.",analysis
+"Does it really matter if a machine built it? There's a ton of millionaires and billionaires who got there by not building things themselves, but by orchestrating the groups of people necessary to build the thing.",analysis
+Where did I say they didn't earn success? Do you think the majority of the c-suite is doing the in-the-trenches work that software engineers do?,analysis
+I haven't made myself the victim at any point. You're getting highly offended over thinking you're part of a group you're telling me you're not.,analysis
+I think they'd have to be slightly above or below.,hot_take
+"The ""average"" person label does a lot of work here. Most people who end up doing something remarkable were never really average in the first place, they just lacked access to the right tools.",analysis
+Maybe when AI gets a little better.,hot_take
+"If you have it planned out in your head, then ask Claude to architect it, not write it. Then have ChatGPT red-team the architecture.",analysis
+I'm not interested in coding or learning to code. I'd rather just make up more games.,hot_take
+Same as it ever was. AI is just a tool. Figma made design easier than Photoshop than MS Paint than drawing on paper.,analysis
+You're assuming tech somehow changes the world. Most of the reason we have so much tech today is because of advertising.,analysis
+Think from the perspective of a person running a software company. Should he feel like a fraud because his employees are writing the software for him?,analysis
+Yes.,hot_take
+Hmm. Most billionaires are frauds then.,hot_take
+They are though. That's the point!,hot_take
+Why don't you start a billion dollar company then if it's that easy?,hot_take
+"There's a lot of luck involved. Amazon was not built by Jeff, it was nudged by Jeff. Every innovation I saw and every patent we claimed came from everyone involved.",analysis
+Nope. They're going to get crushed by systems.,hot_take
+"Genius only mattered because it enabled innovation. It was rare. Still is in the broad sense. If AI removes that barrier, then will becomes the enabler.",analysis
+You just explained why ethics is so important.,analysis
+"AI will change the world, it won't need humans soon.",hot_take
+Intelligence is broadly the same across everyone since you can learn anything given enough time. I think AI will be like a tool to make the average person vastly smarter.,analysis
+"You can change your own universe but not others', everyone has their own. And frankly you'll be surprised by the sheer number of people at the top who are really stupid.",analysis
+The masses aren't really allowed to have the means to their freedom. Most of us will never actually use the most up to date AI programs.,hot_take
+So I was never super psyched about the agentic AI coding. It didn't unlock new capability for me. I can code better than AI. It's a speed boost.,analysis
+I think this is correct in an idealistic implementation of AI. But what we have right now is too early. The economics don't make sense just yet.,analysis
+AI can change narratives.,hot_take
+Yes.,hot_take
+Honestly I don't think an average person would ever get a world-changing idea without serious knowledge in some particular field.,analysis
+Should the knowledge be deep or broad?,hot_take
+"If an average person can, why can't every average person?",analysis
+"The idea is what matters, the AI can assist with synthesis… but you need to make sure everything is grounded in reality at every step.",analysis
+I think they would be more likely to start on a world-changing idea when AI can give them information and break it down.,analysis
+The imposter syndrome part is real but honestly the vision and knowing what to build is the harder part anyway.,analysis
+Sure.,news
+The machine doesn't give a shit. All credit and all blame goes to humans.,analysis
+"Average intelligence, yes. Average drive, no.",analysis
+Do you think it would have been legal if it could? Of course not.,hot_take
+"With or without AI, history is made by individuals. It is often the actions of some previously average person who alters the course of history forever.",analysis
+Watch the movie Wargames. That kid was average.,hot_take
+Wouldn't be very average of them. Hopefully AI changes what average is.,analysis
+This tracks with what we see building FlowPrompt actually. The people doing interesting things with AI orchestration are rarely the strongest coders in the room.,analysis
+"Yes, I think AI gives ordinary people a much better chance to create something impactful. Today, the biggest challenge is often having a good idea and solving a real problem.",analysis
+"The bottleneck was never the code though. AI makes the technical 80% basically free, but the hard 20% is still all you.",analysis
+Better: Global anti-corruption procurement watchdog. Worse: Personalized propaganda engine.,analysis
+"I have a novel to write, it is my idea. If I write this novel and use AI to help with organization, editing, as a human editor might, I am the author.",analysis
+"No, because average people are dumb.",hot_take
+"Someone who changes the world, regardless of whether using AI, is already not an average person.",analysis
+Saving time for anyone looking for the original publication by Anthropic.,hot_take
+I think we all understand that domain knowledge makes programs that are actually actionable.,analysis
+Verified success is not really verifying success in the sense that it's a useful workable product.,analysis
+"Maybe we're witnessing the inversion of software. For decades, the hard part was translating business knowledge into code.",analysis
+That only makes sense if the code is actually cheap. The true cost of tokens is not being paid by users yet.,analysis
+"My takeaway is now is a time to exploit the discounted compute, but don't get dependent on it.",analysis
+My perspective on this is that the hard part was translating business requirements into a specification that is strict and complete enough.,analysis
+People are conflating software engineering with programming. Software engineering is understanding the problem from end to end.,analysis
+Yeah this is the sharper version of the point.,hot_take
+How come is this a big surprise? Context always matters.,hot_take
+I think the surprise is more how close to actual software developers it's become.,analysis
+A lot of domain knowledge can incrementally be extracted by prompting LLMs.,analysis
+Profile of a Top 1% Commenter.,hot_take
+That's a great use case list. Summarizing and simplifying information is where AI really shines.,analysis
+"Just remember, there is a higher rate of inaccurate responses with medical and legal queries.",analysis
+I've been using AI for about 4 years now so I can call BS very readily.,hot_take
+"These findings held, and the abandon-rate gap is the tell. Experts are better at keeping domain context in front of the model.",analysis
+"They count merged code as success, that is all you need to know about that study.",hot_take
+The most telling part is the abandon rate difference.,analysis
+Benchmarks show it well ahead in almost every category.,hot_take
+If you're getting the same output from GPT-5.5 vs Fable it means you were doing tasks that don't require Fable.,analysis
+These use cases were built on specifically trained models on that specific dataset — they are not the same as a general purpose LLM.,analysis
+It's going to be a real 'throw the baby out with the bathwater' scenario when legitimate uses of AI are trashed.,analysis
+They are sentence generators. That's it. Nothing more.,hot_take
+"I've always likened it to a drunk uncle at family gatherings, confident expert at literally every topic.",analysis
+I and all of my peers use Claude to generate 90-100% of highly abstract code.,analysis
+So tell that to the sales people and c-suite and be prepared to be completely ignored like the rest of us.,hot_take
+Develop AI > Fire Human > AI constantly wrong > Hire human to verify AI isn't wrong > profit,analysis
+Twist. It was written by an AI bot that's gone sentient!,hot_take
+Sifting through social media is becoming exhausting because it's either AI hype or slop.,analysis
+Yup. Overhyped and underdelivered. It has incredible use and yet is still sold as snake oil.,analysis
+The tech oligarchs enriched themselves though. Meanwhile the US cut healthcare and NSF/NIH funding.,analysis
+"In my experience, AIs are hilariously bad at even reading Google Scholar comprehensively.",hot_take
+We're all just a part of a big market manipulation around a shiny tech aren't we.,hot_take
+"Underdeliver, my ass. In bioinformatics, it discovered 40 novel methods for single-cell data analysis.",analysis
+There's a contradiction in the statement. Both trees and data are complementary to the algorithm.,analysis
+"Single digit improvements on benchmarks, some only decimal place improvements.",analysis
+My usage bar just says unlimited so I wouldn't know about tokens.,hot_take
+It wasn't really code quality that Fable excelled at. It was orchestrating subagents.,news
+"If you read the 300+ page report on the model, there is probability it judged you as an idiot.",analysis
+Gotta pump those IPO numbers somehow!,hot_take
+I have an unlimited cap on Claude usage at work. In the few days I was allowed to use Fable I ran my usage up over $400.,hot_take
+If you actually read the news stories they tell you that an experienced red team was given access to Mythos.,analysis
+Is this supposed to be cute?,hot_take

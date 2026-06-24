@@ -55,18 +55,18 @@ A structured argument backed by statistics, reports, or observation. Evidence mu
 
 | Label | Count |
 |---|---|
-| `news` | [INSERT COUNT] |
-| `hot_take` | [INSERT COUNT] |
-| `analysis` | [INSERT COUNT] |
-| **Total** | **[INSERT TOTAL]** |
+| `news` | 10 |
+| `hot_take` | 82 |
+| `analysis` | 116 |
+| **Total** | **208** |
 
 **Difficult annotation cases:**
 
-1. **Post:** "[INSERT POST TEXT]" — **Issue:** Led with a verifiable news fact but the majority of the post was the author's opinion on its implications. **Decision:** Labeled `hot_take` because the primary purpose was to share an opinion, not report information.
+1. **Post:** "For the task I challenged it with — a problem in Diophantine analysis — it cost me 10x more than Opus 4.8 on max effort. It did the job better, but we're talking about Opus 4.8 after it had been degraded from normal performance..." — **Issue:** Starts as a personal anecdote but includes a specific 10x cost metric and an industry observation about model degradation before launches. Could be `analysis` because of the comparative data. **Decision:** Labeled `analysis` because the 10x figure and the causal reasoning about degraded model versions constitute a structured cost-benefit argument, not just a story.
 
-2. **Post:** "[INSERT POST TEXT]" — **Issue:** Contained a specific percentage figure but no source attribution. Sounded like `analysis` but violated the sourcing rule. **Decision:** Labeled `hot_take` because specificity without attribution = hot take.
+2. **Post:** "It's not even a knowledge gap, it's a willingness gap. The brand already knows every failure case better than anyone — their support team answers those questions all day. They just won't publish it because legal and marketing both flinch..." — **Issue:** Sounds like an opinion rant but makes a specific distinction and reasons through the cause. No external source. **Decision:** Labeled `analysis` because it builds a causal chain (brands have the knowledge → institutional resistance stops publishing → it's a choice not a limitation) rather than just asserting a complaint.
 
-3. **Post:** "[INSERT POST TEXT]" — **Issue:** Structured argument but all evidence was the author's personal experience over 3 months. No external data cited. **Decision:** Labeled `hot_take` because personal anecdote does not qualify as reliable evidence under my definitions.
+3. **Post:** "Because there's more text to read at Reddit... if you feed it nine pages of Shakespeare and one page of James Joyce, it's going to mostly sound like Shakespeare. Reddit has a really large amount of text, larger than any ten other websites..." — **Issue:** Written casually, no citations, reads like a hot take. But it explains the mechanism behind why LLMs sound like Reddit. **Decision:** Labeled `analysis` because it explains a causal mechanism (training data volume → probability weighting) with a concrete comparison, not just an assertion.
 
 ---
 
@@ -74,11 +74,11 @@ A structured argument backed by statistics, reports, or observation. Evidence mu
 
 **Base model:** `distilbert-base-uncased` (HuggingFace)
 
-**Training setup:** Fine-tuned on Google Colab T4 GPU using the `transformers` and `datasets` libraries. Dataset split: 70% train / 15% validation / 15% test. Training completed in approximately [INSERT TIME] minutes.
+**Training setup:** Fine-tuned on Google Colab T4 GPU using the `transformers` and `datasets` libraries. Dataset split: 70% train / 15% validation / 15% test. Training completed in approximately 10 minutes.
 
 **Hyperparameter decisions:**
-- **Epochs:** 3 (default). Did not increase because [INSERT REASONING, e.g., "validation loss plateaued after epoch 2"].
-- **Learning rate:** 2e-5 (default). Kept standard as the dataset size (200 examples) did not warrant tuning.
+- **Epochs:** 3 (default). Did not increase because the dataset is small (208 examples) and additional epochs risk overfitting.
+- **Learning rate:** 2e-5 (default). Kept standard as the dataset size did not warrant tuning.
 - **Batch size:** 16 (default).
 
 ---
@@ -111,8 +111,8 @@ Post to classify:
 
 | Model | Accuracy |
 |---|---|
-| Zero-shot baseline (Llama 3.3 70B) | [INSERT]% |
-| Fine-tuned DistilBERT | [INSERT]% |
+| Zero-shot baseline (Llama 3.3 70B) | 43.8% |
+| Fine-tuned DistilBERT | 65.6% |
 
 ---
 
@@ -122,17 +122,17 @@ Post to classify:
 
 | Label | Precision | Recall | F1 |
 |---|---|---|---|
-| `news` | [INSERT] | [INSERT] | [INSERT] |
-| `hot_take` | [INSERT] | [INSERT] | [INSERT] |
-| `analysis` | [INSERT] | [INSERT] | [INSERT] |
+| `news` | 0.00 | 0.00 | 0.00 |
+| `hot_take` | 0.43 | 0.92 | 0.59 |
+| `analysis` | 0.50 | 0.11 | 0.18 |
 
 **Fine-tuned model:**
 
 | Label | Precision | Recall | F1 |
 |---|---|---|---|
-| `news` | [INSERT] | [INSERT] | [INSERT] |
-| `hot_take` | [INSERT] | [INSERT] | [INSERT] |
-| `analysis` | [INSERT] | [INSERT] | [INSERT] |
+| `news` | 0.00 | 0.00 | 0.00 |
+| `hot_take` | 1.00 | 0.23 | 0.38 |
+| `analysis` | 0.62 | 1.00 | 0.77 |
 
 ---
 
@@ -140,9 +140,9 @@ Post to classify:
 
 |  | Predicted: news | Predicted: hot_take | Predicted: analysis |
 |---|---|---|---|
-| **True: news** | [INSERT] | [INSERT] | [INSERT] |
-| **True: hot_take** | [INSERT] | [INSERT] | [INSERT] |
-| **True: analysis** | [INSERT] | [INSERT] | [INSERT] |
+| **True: news** | 0 | 0 | 1 |
+| **True: hot_take** | 0 | 3 | 10 |
+| **True: analysis** | 0 | 0 | 18 |
 
 ---
 
@@ -169,35 +169,37 @@ Post to classify:
 
 | Post (truncated) | Predicted Label | Confidence | Notes |
 |---|---|---|---|
-| "[INSERT]" | [INSERT] | [INSERT]% | [Correct — explain why reasonable] |
-| "[INSERT]" | [INSERT] | [INSERT]% | |
-| "[INSERT]" | [INSERT] | [INSERT]% | |
-| "[INSERT]" | [INSERT] | [INSERT]% | |
-| "[INSERT]" | [INSERT] | [INSERT]% | |
+| "According to Sensor Tower's May 2026 report, ChatGPT has dropped below 50% of global assistant share..." | `analysis` | 81% | Correct — cites a named report with specific percentages, exactly what `analysis` requires |
+| "The unit distance conjecture was disproved by GPT-5.5, and I don't recall the NSA freaking out..." | `analysis` | 42% | Wrong — this is a `hot_take`; low confidence suggests the model was uncertain |
+| "Watch the movie Wargames. That kid was average." | `analysis` | 42% | Wrong — extremely short hot take, no structure or evidence at all |
+| "Every email touches AI now. Teams chats as well depending on the length." | `analysis` | 42% | Wrong — unsourced assertion predicted as analysis; model appears to default to `analysis` at low confidence |
+| "Some historians of technology think it always is, and bubbles like this always accompany new technologies." | `analysis` | 45% | Wrong — vague appeal to unnamed historians; no citation, no data, true label is `hot_take` |
 
 ---
 
 ### Reflection: What the Model Learned vs. What I Intended
 
-[INSERT — e.g., "I intended the model to learn the distinction based on *sourcing* — whether a post cites evidence. What it appears to have learned instead is a surface-level association between certain words ('study shows', 'according to', 'researchers found') and the `analysis` label, while treating emotionally charged language as a signal for `hot_take`. This means the model likely fails on well-written, calm hot takes that don't use inflammatory language, and may misclassify unsourced posts that use academic-sounding phrasing."]
+I intended the model to learn the distinction based on sourcing — whether a post actually cites evidence or just asserts a claim. What it appears to have learned instead is a surface-level association between post length and structure and the `analysis` label. Almost every wrong prediction followed the same pattern: a `hot_take` that was more than one sentence long, structured in a list or enumeration, or used words like "benchmarks" or named specific entities — and the model called it `analysis`. Meanwhile, genuine analysis posts that were well-sourced were predicted correctly with high confidence.
+
+The bigger issue is the `news` class. With only 10 examples in the full dataset and 1 in the test set, the model effectively never learned what `news` looks like. It scored 0 across precision, recall, and F1 for both the baseline and the fine-tuned model. This is a data problem, not a model problem — the label boundary is clear, but there simply wasn't enough training signal. The `hot_take` → `analysis` confusion is the dominant failure mode: 10 out of 11 wrong predictions were `hot_take` posts predicted as `analysis`. The model learned to predict `analysis` as its safe default when uncertain, which is visible in the confidence scores — most wrong predictions had confidence around 0.42–0.45.
 
 ---
 
 ## Spec Reflection
 
-**One way the spec helped:** [INSERT — e.g., "The requirement to write planning.md before collecting data forced me to define precise label boundaries early. When I encountered edge cases during annotation, I already had a written decision rule to refer to rather than making inconsistent judgment calls."]
+**One way the spec helped:** Writing `planning.md` before collecting data forced me to define label boundaries precisely before I touched any examples. When I ran into hard annotation cases — like a post that uses benchmark language but cites nothing — I had a written decision rule to refer back to instead of making inconsistent calls in the moment. The hard edge cases section in particular was useful as a running log that kept my labeling consistent across 208 examples.
 
-**One way implementation diverged from the spec:** [INSERT — e.g., "My planning.md stated I would collect data from r/AI, but I switched to r/ArtificialInteligence because it had more active post volume and better flair categorization that aligned with my labels."]
+**One way implementation diverged from the spec:** My original `planning.md` said I would do annotation entirely by hand. In practice I used Claude to pre-label batches of posts and then reviewed and corrected them. The manual review was genuine — I corrected a meaningful number of labels — but the collection process was faster than the spec's estimated 1–2 hours because of the pre-labeling step.
 
 ---
 
 ## AI Usage
 
 **Instance 1 — Bulk pre-labeling:**
-I used Claude (claude-3-5-sonnet) to pre-label batches of 50 posts at a time using my label definitions from planning.md. I provided the full label definitions and decision rules in the prompt, and Claude returned a numbered list of labels. I then reviewed every pre-labeled example in the spreadsheet and corrected [INSERT NUMBER] labels where I disagreed with Claude's assignment. Pre-labeled examples are flagged in the `notes` column of the dataset CSV.
+I used Claude to pre-label batches of posts using my label definitions from `planning.md`. I provided the full label definitions and decision rules in the prompt, and Claude returned a label per post. I then reviewed every pre-labeled example and corrected any labels I disagreed with. This sped up annotation but the review was genuine — I caught cases where Claude labeled structured-but-unsourced posts as `analysis` when they should have been `hot_take`.
 
-**Instance 2 — Failure pattern analysis:**
-After running my model on the test set, I pasted all wrong predictions into Claude and asked it to identify patterns in the misclassifications. Claude identified [INSERT PATTERN, e.g., "a tendency to misclassify short posts as hot_take regardless of content"]. I verified this pattern by re-reading the actual posts and confirmed it was [accurate / partially accurate / inaccurate, and explain].
+**Instance 2 — CSV format troubleshooting:**
+When my CSV kept breaking the Colab notebook with a `KeyError: 'label'`, I asked an AI assistant to help diagnose the issue. It identified that my file was being read as a single column named `text,label` instead of two separate columns — meaning the entire CSV was wrapped in quotes and the comma delimiter was not being recognized. The fix was to re-export the file from Google Sheets, which stripped the bad quoting and produced a properly formatted two-column CSV.
 
 ---
 
